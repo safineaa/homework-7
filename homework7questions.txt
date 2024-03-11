@@ -1,0 +1,13 @@
+2. What are some examples of how PHP and JavaScript are alike and how they differ?
+
+JavaScript and PHP are similar in their syntax and control structures (like their if else, switch, for, while statements)
+They are also both dynamically typed and interpreted languages as well. 
+JavaScript and PHP are different in the sense that PHP is a server-side language, while JS usually runs in the user's browser (even though Node.js allows JS to be used server-side)
+JavaScript can also manipulate the DOM and PHP cannot. 
+
+3. Define MVC, what are the responsibilities of each piece?
+
+MVC stands for Model-View-Controller and it helps to develop UI and is divided into three components.
+Model manages the state of the app, retrieves data, and defines the rules the data can be changed and manipulated.
+View represents the UI of the app. It is responsible for the look of the app and rendering the data and forwarding user interactions to the controller.
+Controller receives input from users from the view, processes the input (possibly updating the model), and returns the output display to the view.
