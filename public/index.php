@@ -12,7 +12,7 @@ use app\controllers\PostController;
 
 
 $url = $_SERVER["REQUEST_URI"];
-
+$method = $_SERVER['REQUEST_METHOD'];
 //todo add a switch statement router to route based on the url
 //if it is "/posts" return an array of posts via the post controller
 //if it is "/" return the homepage view from the main controller
@@ -24,8 +24,11 @@ switch ($url){
         $controller->homepage();
         break;
     case '/posts':
-        $controller = new PostController();
-        $controller->index();
+        if ($method == 'GET') {
+            $controller->index();
+        } elseif ($method == 'POST') {
+            $controller->savePost();
+        }
         break;
     default:
         $controller = new MainController();
